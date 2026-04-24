@@ -87,3 +87,86 @@ Reglas:
 - Usar verbos imperativos: `Add`, `Change`, `Fix`, `Remove`
 - Sin punto final ni puntos suspensivos
 - Máximo 50 caracteres
+
+## CLASE 3
+### ¿Qué es Github?
+
+Plataforma en la nube que permite a desarrolladores alojar, gestionar y colaborar en proyectos de software
+utilizando Git.
+
+### Git vs Github
+
+- **Git**: Sistema de control de versiones, crea puntos de guardado.
+- **Github**: Es el servidor donde esos puntos se almacenan
+
+### SSH vs HTTPS
+
+Para el control de acceso o uso de repositorio.
+- **HTTPS**: Pide autenticación cada vez
+- **SSH**: Se configura la PC/Laptop ssh para comunicar con git hub, mediante una key, esta al ponerla en 
+Github no pedira cada vez
+
+### Configuración SSH 
+Comandos utilizados
+```
+ssh-keygen -t ed25519 -C “tu-correo@email.com”    
+cat ~/.ssh/id_ed25519.pub
+```
+Pasos
+Se copia el contenido del comando cat y en github vamos a:
+- Settings 
+- SSH y gpg kEYS 
+- New SSH kEY: Aqui es donde se pega el contenido, se asigna un nommbre para la pc y Add SSH Key
+
+```
+ssh -T git@github.com  #Esto para verificacion
+```
+
+### Crear Repositorio en Github
+- Ir al apartado de repositorios y dar en NEW
+- POner el nombre y crear repositorio
+
+### Conexión de un repositorio local de Git a uno existente en Github
+ 
+Comandos
+```
+git remote add origin git@github.com:TuUser/TuRepo.git
+
+git branch -M main
+
+git push -u origin main
+```
+### Clonar un repositorio de Git
+
+Comandos
+```
+git clone git clone “git@github.com:TuUser/TuRepo.git”
+
+```
+Con HTTPS
+
+```
+git clone “https://github.com/TuUser/TuRepo.git”
+```
+Comando para cambiar el puntero de github y no pida autenticación cada vez
+
+```
+git remote set-url origin “git@github.com:TuUser/TuRepo.git”
+```
+Comando para ver que repositorio remoto esta conectado a tu repo
+
+```
+git remoto -v
+```
+### Cambios en el repositorio en Github
+
+- Subir archivos locales
+```
+git push origin <rama>
+```
+
+- Bajar los cambios hechos
+
+```
+git pull origin <rama>
+```
