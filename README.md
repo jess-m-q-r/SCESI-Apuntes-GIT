@@ -160,13 +160,86 @@ git remoto -v
 ```
 ### Cambios en el repositorio en Github
 
-- Subir archivos locales
+- Subir archivos locales.
 ```
 git push origin <rama>
 ```
 
-- Bajar los cambios hechos
+- Bajar los cambios hechos.
 
 ```
 git pull origin <rama>
+```
+## CLASE 4
+
+### Git Remote
+Es el comando que permite gestionar nuestras conexiones con los repositorios remotos.
+Le dice a GIT local donde enviar o traer la información.
+Comandos
+- **git remote -v**: Muestra las URLs donde apunta nuestro repositorio.
+- **git remote add <apodo> "url"**: Vincula el repositorio local con uno en la nube .
+- **git remote set-url <apodo> "url"**: Cambia la url donde apunta nuestro repositorio. 
+<apodo> es una forma de llamar a la url
+
+### Multiples SSH
+Si se tiene mas de una cuenta de Github se puede manejar mas de una llave SSH. Es decir se necesita una llave
+para cada puerta como tal.
+
+### Crear multicuentas
+
+Comando para diferenciar de la nueva cuenta y evitar que sobreescriba en la ruta ~./ssh/id_ed25519, se crea una
+nueva ruta.
+```
+ssh-keygen -t ed25519 -C “tu-correo@email.com”  -f ~./ssh/ruta.pub 
+```
+
+Cuentas que se debe poner 
+```
+ #Cuenta Personal
+Host github.com
+ HostName github.com
+ User git 
+ identityFIle ~./ssh/id_ed25519
+
+ #Cuenta del otro correo
+Host github-miname
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_miname
+```
+Una vez modificado 
+```
+ssh -T git@github-auxi
+```
+### Configuraciones Locales
+Las configuraciones locales se toman en cuenta antes que las globales, y estas solo funcionan para el repositorio en el que se aplican.
+Para hacer configuraciones locales lo que se debe hacer es
+lo mismo que en las globales pero sin el flag --global:
+
+```
+git config user.name "Mi nuevo Name"
+git config user.email "micorreo@gmail.com"
+```
+Realizar git clone con el host correcto
+```
+git clone git@github-miname:usuario/repo.git
+```
+
+### Git Checkout
+¿Para que sirve?
+- Inspeccionar: Ver codifgo en un commit antiguo
+- Restaurar
+- Experimentar
+- Cambiar
+
+### Como ir y volver en un commit
+```
+#Para ir atras debes hacer:
+git checkout <hash_antiguo>
+#Y para volver al ultimo hash de la rama
+git checkout <rama>
+
+#Si hiciste algo aca (como un commit) desaparece salvo que hagas:
+git checkout <hash_commit_creado>
+git checkout -b rama_nueva
 ```
