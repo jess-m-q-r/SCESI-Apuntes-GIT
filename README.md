@@ -243,3 +243,57 @@ git checkout <rama>
 git checkout <hash_commit_creado>
 git checkout -b rama_nueva
 ```
+## CLASE 5
+### Ramas Y GITFLOW
+Las ramas permite crear una versión paralela, sin afectar el main, el codigo principal funcional.
+Puedes realizar cambios sin miedo a dañar directamente el codigo principal y trabajo en paralelo con otras
+personas.
+#### Git branch
+Comando que permite gestionar las ramas que tiene o tendra un proyecto.
+```
+git branch                         #Lista las ramas.
+git branch <nombre de la rama>     #Crea rama a partir de la que estamos actualmente.
+git branch -D <nombre de la rama>  #Elimina una rama.
+```
+#### Git checkout
+El uso de git checkout en ramas es el siguiente:
+```
+git checkout <rama>    #Cambia de rama, pero no se debe tener nada modificado sin guardar.
+git checkout -b <rama> #Crea la rama y te mueve directamente a esa rama creada.
+```
+Git checkout es multiproposito (Rama, Commits, Archivos).
+#### Git switch
+Alternativa para navegar entre ramas, dado que git checkout estaba sobrecargado o tenia muchas funciones.
+
+```
+git switch <rama>     #Cambia a esa rama.
+git switch -c <rama>  #Crea la rama y te posiciona ahi.
+```
+### Git flow
+Es un flujo de trabajo el cual nos permite organizarnos y maneja estandares para tener organizado nuestras ramas.
+Que ramas se tiene:
+- **main**: Es la que se tiene por defecto al crear el repositorio de git, contiene el codigo que se encuentra
+en producción.
+- **develop**: Es la rama de "pre-producción". Tiene las caracteristicas que aun estan en el periodo de 
+validación.
+- **rama de apoyo**: Son ramas que nos ayudaran en el desarrollo
+1. **feature**: Cuando se trabaja en una nueva característica para el proyecto. Se crea en la rama develop, al 
+acabar se fusiona en develop y se elimina.
+```
+ #Ejemplos de nombres
+feature/sum-function
+feature/add-search-bar
+```
+2. **release**: Cuando se prepara el lanzamiento de una nueva versión. En teoría donde se hacen pruebas (QA).
+Se crea desde la rama develop y se fucionan en develop o main.
+```
+ #Ejemplos de nombres
+release/v1.0.0
+release/v2.1.0-beta
+```
+3. **hotfix**: Para trabajar en cambios imprevistos, como arreglar bigs o un problema en producción. Se crea 
+desde la rama main.
+```
+ #Ejemplos de nombres
+hotfix/login-authentication-error
+```
