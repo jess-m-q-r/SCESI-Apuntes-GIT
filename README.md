@@ -297,3 +297,71 @@ desde la rama main.
  #Ejemplos de nombres
 hotfix/login-authentication-error
 ```
+## CLASE 6
+### Git merge
+Permite fusionar ramas en una sola, para que tengan commit hechos.
+Se recomienda usar el flag `--no-ff` (no fast forward) para preservar el historial de ramas, incluso si la rama es eliminada después.
+```
+git merge --no-ff rama
+```
+### Git fetch
+Permite ver cambios en la rama y sus ramas hijas.
+```
+git fetch
+```
+### Git pull
+Descarga y aplica todos los cambios del repositorio remoto a la rama actual.
+```
+git pull origin rama
+```
+### Git push
+Sube los cambios locales al repositorio remoto.
+```
+git push origin rama
+```
+Si es la primera vez* que subes una rama a un repositorio que no es tuyo, usa el flag "-u"
+```
+git push origin -u rama
+```
+### Flujo de trabajo (Sin Pull Requests)
+ 
+1. Situarse en develop y actualizarla
+```
+git checkout develop
+git fetch
+git pull origin develop
+```
+2. Moverse a tu rama de trabajo
+```
+git checkout mi-rama
+```
+3. Integrar cambios de develop (solo si hubo cambios)
+```
+git merge develop
+```
+4. Trabajar en tu rama...
+5. Subir cambios al remoto (agregar -u si es la primera vez)
+```
+git push origin mi-rama
+```
+6. Volver a develop y actualizarla
+```
+git checkout develop
+git fetch
+git pull origin develop
+```
+7. Fusionar tu rama en develop
+```
+git merge --no-ff mi-rama
+```
+8. Resolver conflictos manualmente si los hay, luego:
+```
+git add .
+git commit
+```
+9. Eliminar la rama local y subir develop
+```
+git branch -D mi-rama
+git push origin develop
+```
+ 
