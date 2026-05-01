@@ -454,7 +454,9 @@ Guarda temporalmente cambios sin hacer commits.
 git stash -m "descripcion" #Guarda los cambios  con un nombre
 git stash list             #Lista todos los stashes guardados
 git stash pop              #Recupera el ultimo stash
-```
+```  
+![](imagen/gitStash.svg)
+
 ### Git diff
 Muestra las diferencias entre archivos o ramas.
 ```
@@ -465,4 +467,6 @@ git diff --staged archivo   # Cambios en staging de un archivo específico
 git diff rama1 rama2        # Diferencias entre dos ramas
 ```
 - Usar git stash -m "algo" siempre con un mensaje descriptivo.
-- Eliminar la rama después de mergear el PR.
+- Eliminar la rama después de mergear el PR.  
+
+![](imagen/gitDiff.png)
