@@ -387,8 +387,8 @@ git push origin develop
 ![](imagen/workflow.webp)
 ## CLASE 7
 ### Pull Request
-Es la forma de trabajo en git/github, se crea un request(petición) en el grupo del repositorio de github el cual permite mostrar que es lo que se quiere unir o mergar al codigo base que ya se tiene.
-
+Es la forma de trabajo en git/github, se crea un request(petición) en el grupo del repositorio de github el cual permite mostrar que es lo que se quiere unir o mergar al codigo base que ya se tiene.  
+![](imagen/PR.webp)
 ### Como crear una Pull Request
 Al momento de haber realizado un **git push origin rama** en github mostrara un boton para realizar la PR.  
 [Video tutorial de Youtube ](https://youtu.be/4CeMKqloOJc)
@@ -433,6 +433,8 @@ git push origin
 4. Crear el PR
 
 Sigue el flujo mostrado en como crear un PR.  
+
+![](imagen/workflowGithub.png)
 ### ¿Por qué usar PRs?
 
 Sin PRs, cualquier colaborador puede mergear código sin avisar esto es un riesgo innecesario. Los PRs obligan al equipo a revisar los cambios antes de que entren al repositorio, abriendo espacio para el debate, la aprobación y la detección de errores o código problemático.
