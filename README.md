@@ -258,14 +258,17 @@ git checkout -b rama_nueva
 ### Ramas Y GITFLOW
 Las ramas permite crear una versión paralela, sin afectar el main, el codigo principal funcional.
 Puedes realizar cambios sin miedo a dañar directamente el codigo principal y trabajo en paralelo con otras
-personas.
+personas.  
+
+![](imagen/gitFlow.png)
 #### Git branch
 Comando que permite gestionar las ramas que tiene o tendra un proyecto.
 ```
 git branch                         #Lista las ramas.
 git branch <nombre de la rama>     #Crea rama a partir de la que estamos actualmente.
 git branch -D <nombre de la rama>  #Elimina una rama.
-```
+```  
+![](imagen/gitBranch.webp)
 #### Git checkout
 El uso de git checkout en ramas es el siguiente:
 ```
@@ -279,7 +282,8 @@ Alternativa para navegar entre ramas, dado que git checkout estaba sobrecargado 
 ```
 git switch <rama>     #Cambia a esa rama.
 git switch -c <rama>  #Crea la rama y te posiciona ahi.
-```
+```  
+![](imagen/gitSwitch-Checkout.png)
 ### Git flow
 Es un flujo de trabajo el cual nos permite organizarnos y maneja estandares para tener organizado nuestras ramas.
 Que ramas se tiene:
@@ -287,27 +291,27 @@ Que ramas se tiene:
 en producción.
 - **develop**: Es la rama de "pre-producción". Tiene las caracteristicas que aun estan en el periodo de 
 validación.
-- **rama de apoyo**: Son ramas que nos ayudaran en el desarrollo
-1. **feature**: Cuando se trabaja en una nueva característica para el proyecto. Se crea en la rama develop, al 
-acabar se fusiona en develop y se elimina.
-```
- #Ejemplos de nombres
-feature/sum-function
-feature/add-search-bar
-```
-2. **release**: Cuando se prepara el lanzamiento de una nueva versión. En teoría donde se hacen pruebas (QA).
-Se crea desde la rama develop y se fucionan en develop o main.
-```
- #Ejemplos de nombres
-release/v1.0.0
-release/v2.1.0-beta
-```
-3. **hotfix**: Para trabajar en cambios imprevistos, como arreglar bigs o un problema en producción. Se crea 
-desde la rama main.
-```
- #Ejemplos de nombres
-hotfix/login-authentication-error
-```
+- **rama de apoyo**: Son ramas que nos ayudaran en el desarrollo.
+
+    1. **feature**: Cuando se trabaja en una nueva característica para el proyecto. Se crea en la rama develop, al acabar se fusiona en develop y se elimina.
+    ```
+    #Ejemplos de nombres
+    feature/sum-function
+    feature/add-search-bar
+    ```
+    2. **release**: Cuando se prepara el lanzamiento de una nueva versión. En teoría donde se hacen pruebas (QA).  
+    Se crea desde la rama develop y se fucionan en develop o main.
+    ```
+    #Ejemplos de nombres
+    release/v1.0.0
+    release/v2.1.0-beta
+    ```
+    3. **hotfix**: Para trabajar en cambios imprevistos, como arreglar bigs o un problema en producción. Se crea desde la rama main.
+    ```
+    #Ejemplos de nombres
+    hotfix/login-authentication-error
+    ```
+![](imagen/gitFlowCompleto.jpg)
 ## CLASE 6
 ### Git merge
 Permite fusionar ramas en una sola, para que tengan commit hechos.
