@@ -11,7 +11,7 @@ Permite guardar y tener control sobre las versiones de archivos de manera local.
 <br clear="all">
 
 ### ¿Cómo nació GIT?
-<img src="imagen/Linus.jpg" width="300" align="left" hspace="10">
+<img src="imagen/Linus.jpg" width="300" align="right" hspace="10">
 Linus Torvalds el creador de Linux, usaba BitKeeper pero tubo un problema y BitKeeper decidio quitarles la licencia debido a esto Linus se encerrro y dentro de 2 a 3 semanas creo GIT.
 <br clear="all">
 
