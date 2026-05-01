@@ -313,14 +313,17 @@ validación.
     ```
 ![](imagen/gitFlowCompleto.jpg)
 ## CLASE 6
+<img src="imagen/gitMerge.png" align="left" width="300" hspace="5">
+
 ### Git merge
-Permite fusionar ramas en una sola, para que tengan commit hechos.
+Permite fusionar ramas en una sola, para que tengan commit hechos.  
 Se recomienda usar el flag `--no-ff` (no fast forward) para preservar el historial de ramas, incluso si la rama es eliminada después.
 ```
 git merge --no-ff rama
-```
+```  
+
 ### Git fetch
-Permite ver cambios en la rama y sus ramas hijas.
+Permite ver cambios en el repositorio remoto en las ramas sin modificar nada en el local.
 ```
 git fetch
 ```
@@ -328,7 +331,8 @@ git fetch
 Descarga y aplica todos los cambios del repositorio remoto a la rama actual.
 ```
 git pull origin rama
-```
+```  
+![](imagen/gitFetch-Pull.jpg)
 ### Git push
 Sube los cambios locales al repositorio remoto.
 ```
@@ -337,7 +341,8 @@ git push origin rama
 Si es la primera vez* que subes una rama a un repositorio que no es tuyo, usa el flag "-u"
 ```
 git push origin -u rama
-```
+```  
+![](imagen/gitPush.gif)
 ### Flujo de trabajo (Sin Pull Requests)
  
 1. Situarse en develop y actualizarla
@@ -378,7 +383,8 @@ git commit
 ```
 git branch -D mi-rama
 git push origin develop
-```
+```  
+![](imagen/workflow.webp)
 ## CLASE 7
 ### Pull Request
 Es la forma de trabajo en git/github, se crea un request(petición) en el grupo del repositorio de github el cual permite mostrar que es lo que se quiere unir o mergar al codigo base que ya se tiene.
