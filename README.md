@@ -4,19 +4,20 @@ Jessica Mayra Quispe Rico
 
 ## CLASE 1
 ### ¿Qué es GIT?
-
-Sistema de Control de Versiones Distribuido (VCS).
-Permite guardar y tener control sobre las versiones de archivos de manera local.
+<img src="imagen/gitLogo.png" width="200" align="left" hspace="40">
+Sistema de Control de Versiones Distribuido (VCS).  
+<br>
+Permite guardar y tener control sobre las versiones de archivos de manera local.  
+<br clear="all">
 
 ### ¿Cómo nació GIT?
-
-Linus Torvalds el creador de Linux, usaba BitKeeper pero tubo un problema y BitKeeper decidio  
-quitarles la licencia debido a esto Linus se encerrro y dentro de 2 a 3 semanas creo GIT.
-
+<img src="imagen/Linus.jpg" width="300" align="left" hspace="10">
+Linus Torvalds el creador de Linux, usaba BitKeeper pero tubo un problema y BitKeeper decidio quitarles la licencia debido a esto Linus se encerrro y dentro de 2 a 3 semanas creo GIT.
+<br clear="all">
 
 ### ¿Cómo instalar GIT? 
 
-Página web: https://gitscm.com/install/ 
+Página web: [GIT Install](https://gitscm.com/install/) 
 
 Se debe seguir los pasos indicados en la página dependiendo el S.O.
 
@@ -40,8 +41,8 @@ git config --global core.autocrlf true
 
 ### Archivos que todo repositorio debe tener
 
-**README.md**: Descripción del proyecto
-**.gitignore**: Archivo que indica a GIT que debe ignorar o no incluir
+- **README.md**: Descripción del proyecto.  
+- **.gitignore**: Archivo que indica a GIT que debe ignorar o no incluir.
 
 ## CLASE 2
 ### Estados de GIT
