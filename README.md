@@ -50,10 +50,11 @@ git config --global core.autocrlf true
 **Directorio de Trabajo (Modificado)**: Tu carpeta local donde GIT observa los archivos y los cataloga en:
 - **Untracked**: Sin seguimiento, GIT lo ve pero no tiene una versión antigua de este archivo.
 - **Modified**: GIT ya tiene una versión previa del archivo y fue modificado, eliminado o renombrado.
-**Stage Area (Preparado)**: Área de espera donde seleccionas qué archivos modificados se incluirán en el siguiente commit.
+- **Stage Area (Preparado)**: Área de espera donde seleccionas qué archivos modificados se incluirán en el siguiente commit.
  
-**Repositorio Local (Confirmado)**: El historial. Los cambios quedan guardados con un ID (hash) y son parte de la historia.
- 
+- **Repositorio Local (Confirmado)**: El historial. Los cambios quedan guardados con un ID (hash) y son parte de la historia.  
+
+![](imagen/gitEstados.png)
 ### Comandos Básicos
  
 ```
@@ -66,14 +67,15 @@ git reset --soft HEAD~1         # Deshacer el último commit
 ```
  
 ### Buenas Prácticas en Commits
- 
+
 Usar **commits atómicos**: cada commit representa un único cambio lógico, pequeño y completo.
  
 Formato recomendado:
 ```
 git commit -m "<tipo>: <descripción>"
 ```
- 
+![](imagen/commit.png)  
+
 Prefijos:
 - **feat**: nueva característica para el usuario.
 - **fix**: bug que afecta al usuario.
