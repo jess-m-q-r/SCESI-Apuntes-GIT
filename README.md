@@ -423,3 +423,23 @@ Saber la importancia de los PRs no es suficiente, sin restricciones los colabora
 ### ¿Cómo colaboro si no soy un colaborador invitado?
 
 Puedes contribuir a un repositorio sin ser colaborador invitado mediante un fork.
+
+## CLASE 8
+### Git stash
+Guarda temporalmente cambios sin hacer commits.
+```
+git stash -m "descripcion" #Guarda los cambios  con un nombre
+git stash list             #Lista todos los stashes guardados
+git stash pop              #Recupera el ultimo stash
+```
+### Git diff
+Muestra las diferencias entre archivos o ramas.
+```
+git diff .                  # Cambios sin stagear (todos los archivos)
+git diff archivo            # Cambios sin stagear en un archivo específico
+git diff --staged .         # Cambios ya en staging (todos los archivos)
+git diff --staged archivo   # Cambios en staging de un archivo específico
+git diff rama1 rama2        # Diferencias entre dos ramas
+```
+- Usar git stash -m "algo" siempre con un mensaje descriptivo.
+- Eliminar la rama después de mergear el PR.
