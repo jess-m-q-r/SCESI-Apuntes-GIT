@@ -92,6 +92,8 @@ Reglas:
 - Máximo 50 caracteres
 
 ## CLASE 3
+<img src="imagen/githubLogo.jpg" align="right" width="200">  
+
 ### ¿Qué es Github?
 
 Plataforma en la nube que permite a desarrolladores alojar, gestionar y colaborar en proyectos de software
@@ -101,13 +103,15 @@ utilizando Git.
 
 - **Git**: Sistema de control de versiones, crea puntos de guardado.
 - **Github**: Es el servidor donde esos puntos se almacenan
+<br clear="all">  
+<img src="imagen/sshVShttps.jpeg" align="left" height="200" width="250" hspace="30">  
 
 ### SSH vs HTTPS
-
 Para el control de acceso o uso de repositorio.
-- **HTTPS**: Pide autenticación cada vez
-- **SSH**: Se configura la PC/Laptop ssh para comunicar con git hub, mediante una key, esta al ponerla en 
-Github no pedira cada vez
+- **HTTPS**: Pide autenticación cada vez.
+- **SSH**: Se configura la PC/Laptop ssh para comunicar con git hub, mediante una key, esta al ponerla en Github no pedira cada vez.
+
+<br clear="all">
 
 ### Configuración SSH 
 Comandos utilizados
@@ -116,18 +120,21 @@ ssh-keygen -t ed25519 -C “tu-correo@email.com”
 cat ~/.ssh/id_ed25519.pub
 ```
 Pasos
-Se copia el contenido del comando cat y en github vamos a:
-- Settings 
-- SSH y gpg kEYS 
-- New SSH kEY: Aqui es donde se pega el contenido, se asigna un nommbre para la pc y Add SSH Key
+- Se copia el contenido del comando cat y en github vamos a:
+    - Settings 
+    - SSH y gpg kEYS 
+    - New SSH kEY: Aqui es donde se pega el contenido, se asigna un nommbre para la pc y Add SSH Key.  
 
-```
+![](imagen/GitHub-new-ssh-key.png)
+```  
 ssh -T git@github.com  #Esto para verificacion
 ```
 
 ### Crear Repositorio en Github
-- Ir al apartado de repositorios y dar en NEW
-- POner el nombre y crear repositorio
+- Ir al apartado de repositorios y dar en NEW.
+- Poner el nombre y crear repositorio. 
+
+![](imagen/crearRepo.png)
 
 ### Conexión de un repositorio local de Git a uno existente en Github
  
@@ -139,8 +146,8 @@ git branch -M main
 
 git push -u origin main
 ```
-### Clonar un repositorio de Git
-
+### Clonar un repositorio de Git  
+![](imagen/clonarRepo.png)
 Comandos
 ```
 git clone git clone “git@github.com:TuUser/TuRepo.git”
