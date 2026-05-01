@@ -364,4 +364,62 @@ git commit
 git branch -D mi-rama
 git push origin develop
 ```
- 
+## CLASE 7
+### Pull Request
+Es la forma de trabajo en git/github, se crea un request(petición) en el grupo del repositorio de github el cual permite mostrar que es lo que se quiere unir o mergar al codigo base que ya se tiene.
+
+### Como crear una Pull Request
+Al momento de haber realizado un **git push origin rama** en github mostrara un boton para realizar la PR.  
+[Video tutorial de Youtube ](https://youtu.be/4CeMKqloOJc)
+
+### Flujo de trabajo
+1. Preparar tu rama
+
+```
+git checkout develop
+git fetch
+git pull origin develop
+
+git checkout    # Agrega -b si estás creando la rama nueva
+git merge develop            # Solo si hubo cambios en develop desde que creaste tu rama
+```
+
+2. Trabajar y subir cambios
+
+```
+git push origin    # Agrega -u si es la primera vez que subes esta rama al remoto
+```
+
+3. Antes de abrir el PR — sincronizar con develop
+
+```
+git checkout develop
+git fetch
+git pull origin develop
+
+git checkout 
+git merge develop            # Solo si hubo nuevos cambios en develop
+```
+
+Si hay conflictos, resuélvelos manualmente en los archivos afectados, luego:
+
+```
+git add .
+git commit   
+git push origin 
+```
+
+4. Crear el PR
+
+Sigue el flujo mostrado en como crear un PR.  
+### ¿Por qué usar PRs?
+
+Sin PRs, cualquier colaborador puede mergear código sin avisar esto es un riesgo innecesario. Los PRs obligan al equipo a revisar los cambios antes de que entren al repositorio, abriendo espacio para el debate, la aprobación y la detección de errores o código problemático.
+
+### ¿Cómo proteger el repositorio y limitar la colaboración?
+
+Saber la importancia de los PRs no es suficiente, sin restricciones los colaboradores aún pueden mergear sin aprobación. 
+
+### ¿Cómo colaboro si no soy un colaborador invitado?
+
+Puedes contribuir a un repositorio sin ser colaborador invitado mediante un fork.
