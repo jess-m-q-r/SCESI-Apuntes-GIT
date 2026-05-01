@@ -182,21 +182,23 @@ git pull origin <rama>
 ```
 ## CLASE 4
 
-### Git Remote
+### Git remote
 Es el comando que permite gestionar nuestras conexiones con los repositorios remotos.
 Le dice a GIT local donde enviar o traer la información.
 Comandos
 - **git remote -v**: Muestra las URLs donde apunta nuestro repositorio.
 - **git remote add <apodo> "url"**: Vincula el repositorio local con uno en la nube .
 - **git remote set-url <apodo> "url"**: Cambia la url donde apunta nuestro repositorio. 
-<apodo> es una forma de llamar a la url
+<apodo> es una forma de llamar a la url  
+  
+![](imagen/gitRemote.png)
 
 ### Multiples SSH
 Si se tiene mas de una cuenta de Github se puede manejar mas de una llave SSH. Es decir se necesita una llave
 para cada puerta como tal.
 
 ### Crear multicuentas
-
+![](imagen/multipleSSHkey.png)
 Comando para diferenciar de la nueva cuenta y evitar que sobreescriba en la ruta ~./ssh/id_ed25519, se crea una
 nueva ruta.
 ```
@@ -223,8 +225,7 @@ ssh -T git@github-auxi
 ```
 ### Configuraciones Locales
 Las configuraciones locales se toman en cuenta antes que las globales, y estas solo funcionan para el repositorio en el que se aplican.
-Para hacer configuraciones locales lo que se debe hacer es
-lo mismo que en las globales pero sin el flag --global:
+Para hacer configuraciones locales lo que se debe hacer es lo mismo que en las globales pero sin el flag --global:
 
 ```
 git config user.name "Mi nuevo Name"
@@ -238,10 +239,10 @@ git clone git@github-miname:usuario/repo.git
 ### Git Checkout
 ¿Para que sirve?
 - Inspeccionar: Ver codifgo en un commit antiguo
-- Restaurar
-- Experimentar
-- Cambiar
-
+- Restaurar.
+- Experimentar.
+- Cambiar.  
+![](imagen/gitCheckout.svg)
 ### Como ir y volver en un commit
 ```
 #Para ir atras debes hacer:
